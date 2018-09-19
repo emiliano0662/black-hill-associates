@@ -4,6 +4,27 @@ $(document).ready(function() {
 	
 	$("#footer").load("footer.html");
 
+	var owl_carousel_main = $('.owl-carousel-home').owlCarousel({
+		items: 1,
+		loop: true,
+		margin: 15,
+		nav: false,
+		dots: true,
+		autoplay: true
+	});
+
+	$(".btn-owl-carousel-home-left").on('click', function (event) {
+		event.preventDefault();
+
+		owl_carousel_main.trigger('prev.owl.carousel');
+	});
+
+	$(".btn-owl-carousel-home-right").on('click', function (event) {
+		event.preventDefault();
+
+		owl_carousel_main.trigger('next.owl.carousel');
+	});
+
 	$("[data-dinaanim]").each(function () {
 
 		var $this = $(this);
