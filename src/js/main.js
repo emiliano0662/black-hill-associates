@@ -25,6 +25,36 @@ $(document).ready(function() {
 		owl_carousel_main.trigger('next.owl.carousel');
 	});
 
+	var owl_carousel = $('.owl-carousel').owlCarousel({
+		loop: true,
+		margin: 30,
+		nav: false,
+		dots: false,
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 2
+			},
+			1000: {
+				items: 3
+			}
+		}
+	});
+
+	$('.btn-owl-carousel.bth-owl-carousel-left').on('click', function (event) {
+		event.preventDefault();
+
+		owl_carousel.trigger('prev.owl.carousel');
+	});
+
+	$('.btn-owl-carousel.bth-owl-carousel-right').on('click', function (event) {
+		event.preventDefault();
+
+		owl_carousel.trigger('next.owl.carousel');
+	});
+
 	$("[data-dinaanim]").each(function () {
 
 		var $this = $(this);

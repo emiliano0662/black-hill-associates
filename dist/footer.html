@@ -8,12 +8,12 @@
                 <img src="./assets/img/logo.png" class="img-fluid">
 
                 <ul class="footer-list-menu">
-                    <li><a href="" target="">Career Services</a></li>
-                    <li><a href="" target="">Staffing Services</a></li>
-                    <li><a href="" target="">Industries and areas of expertise</a></li>
-                    <li><a href="" target="">Job Oportunities</a></li>
-                    <li><a href="" target="">Policies of privacy</a></li>
-                    <li><a href="" target="">Terms and conditions</a></li>
+                    <li><a href="./career-services.html" target="_self">Career Services</a></li>
+                    <li><a href="./staffing-services.html" target="_self">Staffing Services</a></li>
+                    <li><a href="./industries-and-areas-of-expertise.html" target="_self">Industries and areas of expertise</a></li>
+                    <li><a href="" target="_self">Job Oportunities</a></li>
+                    <li><a href="" target="_self">Policies of privacy</a></li>
+                    <li><a href="" target="_self">Terms and conditions</a></li>
                 </ul>
 
             </div>
@@ -51,3 +51,46 @@
             
     </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Submit CV & Pay</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                
+                <form enctype="multipart/form-data" action="script-send-form.php" method="POST">
+
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="input_file_cv" name="input_file_cv" required>
+                        <label class="custom-file-label" for="input_file_cv">Select File</label>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="input_email" name="input_email" placeholder="Enter email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" id="input_message" name="input_message" placeholder="Message" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+
+                </form>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
