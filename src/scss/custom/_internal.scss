@@ -138,6 +138,16 @@
                 background: transparent url('../img/icon-circle-ul.png') left 15px no-repeat;
             }
         }
+
+        .btn-primary {
+            margin-bottom: 22px;
+            padding: 1px 20px;
+            border: none;
+            background: transparent url('../img/bg-btn.jpg') top left / 1px 100% repeat-x;
+            -webkit-border-radius: 0.35rem;
+            -moz-border-radius: 0.35rem;
+            border-radius: 0.35rem;
+        }
     }
 }
 

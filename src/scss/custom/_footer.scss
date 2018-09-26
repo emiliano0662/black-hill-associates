@@ -2,6 +2,7 @@ footer {
 
     .col-md-4 {
         margin-top: 50px;
+        text-align: center;
 
         .img-fluid {
             margin-bottom: 12px;
@@ -15,7 +16,6 @@ footer {
 
         h2 {
             margin: 0px 0px 10px 0px;
-            text-align: center;
             font-weight: 700;
             font-size: 30px;
             color: #1c38b4;
@@ -24,7 +24,8 @@ footer {
         .footer-list-menu {
             list-style: none;
             padding-left: 0px;
-    
+            text-align: left;
+
             li {
     
                 a {
@@ -39,6 +40,7 @@ footer {
         .footer-list-address {
             list-style: none;
             padding-left: 0px;
+            text-align: left;
     
             li {
                 margin-bottom: 10px;
@@ -62,6 +64,20 @@ footer {
                     background: transparent url('../img/icon-email.png') left 8px no-repeat;
                 }
             }
+        }
+
+        .btn-primary {
+            margin-bottom: 22px;
+            padding: 1px 20px;
+            border: none;
+            background: transparent url('../img/bg-btn.jpg') top left / 1px 100% repeat-x;
+            -webkit-border-radius: 0.35rem;
+            -moz-border-radius: 0.35rem;
+            border-radius: 0.35rem;
+        }
+
+        &:nth-of-type(1) {
+            text-align: left;
         }
     }
     
