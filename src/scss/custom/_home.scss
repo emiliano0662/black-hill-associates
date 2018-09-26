@@ -1,7 +1,12 @@
 .home-banner {
     padding: 40px 0px 25px 0px;
     border-bottom: 6px solid #1c38b4;
-    background: transparent url('../img/img-banner.jpg') top center / cover no-repeat;
+    background-color: transparent;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all 2s;
+    transition: all 2s;
 
     .col-6 {
         display: flex;
