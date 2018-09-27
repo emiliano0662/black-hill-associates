@@ -1,4 +1,32 @@
-<?php $today = date("dmYHis");
+<?php
+$targetfolder = "files/";
+
+$targetfolder = $targetfolder . basename($_FILES['input_file_cv']['name']);
+
+$file_type = $_FILES['input_file_cv']['type'];
+
+if ($file_type == "application/pdf") 
+{
+	move_uploaded_file($_FILES['input_file_cv']['tmp_name'], $targetfolder);
+}
+
+$message = $_POST['input_message'];
+$email = $_POST['input_email'];
+
+$asunto = "Resume Services (Load & Paid)";
+$destinatario = "info@blackhillassociates.com"; 
+
+$cuerpo = "<html><head><title>Black Hill Associates</title></head><body><p><b>Email:</b> ".$email."</p><br><p><b>Message:</b> ".$message."</p><br><p><b>Resume Services: </b> <a href=\"http://blackhillassociates.com/beta/".$targetfolder."\" target=\"_blank\" download>Download</a></p></body></html>"; 
+
+$headers = "MIME-Version: 1.0\r\n"; 
+$headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+
+$headers .= "From: ".$email."\r\n"; 
+$headers .= "Reply-To: ".$email."\r\n"; 
+
+mail($destinatario,$asunto,$cuerpo,$headers);
+
+$today = date("dmYHis");
 
 $data = array(
     'cmd'               => '_xclick',
