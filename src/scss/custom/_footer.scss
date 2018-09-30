@@ -49,19 +49,19 @@ footer {
                 font-size: 20px;
 
                 &:nth-of-type(1) {
-                    background: transparent url('../img/icon-user.png') left 3px no-repeat;
+                    background: transparent url('../img/icon-user.png') left 3px / 35px auto no-repeat;
                 }
 
                 &:nth-of-type(2) {
-                    background: transparent url('../img/icon-location.png') left 3px no-repeat;
+                    background: transparent url('../img/icon-location.png') left 3px / 35px auto no-repeat;
                 }
 
                 &:nth-of-type(3) {
-                    background: transparent url('../img/icon-phone.png') left 3px no-repeat;
+                    background: transparent url('../img/icon-phone.png') left 3px / 35px auto no-repeat;
                 }
 
                 &:nth-of-type(4) {
-                    background: transparent url('../img/icon-email.png') left 8px no-repeat;
+                    background: transparent url('../img/icon-email.png') left 5px / 35px auto no-repeat;
                 }
             }
         }
