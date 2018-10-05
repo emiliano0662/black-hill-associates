@@ -87,14 +87,14 @@
             p {
                 text-align: justify;
                 font-weight: 700;
-                color: #FFF;
+                color: #000;
             }
             
             small {
                 font-style: italic;
                 font-weight: 700;
                 font-size: 20px;
-                color: #FFF;
+                color: #000;
             }
         }
 
@@ -250,8 +250,14 @@
 }
 
 .home-job-opportunities {
-    padding-bottom: 20px;
-    background: transparent url('../img/img-home-job-opportunities.jpg') left top / 100% 1px repeat-y;
+    //padding-bottom: 20px;
+    padding: 0px;
+    //background: transparent url('../img/img-home-job-opportunities.jpg') left top / 100% 1px repeat-y;
+    background-color: #000;
+
+    .img-fluid {
+        width: 100%;
+    }
 
     .col-12 {
         padding: 0px 50px;
