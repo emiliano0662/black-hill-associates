@@ -21,3 +21,30 @@ article {
 	float: left;
 	position: relative;
 }
+
+#exampleModalCenter {
+
+	.modal-body {
+
+		.form-group {
+
+			.custom-file {
+
+				.custom-file-input {
+					cursor: pointer;
+				}
+			}
+		}
+	
+		p {
+			margin: 0px;
+			text-align: justify;
+			line-height: 15px;
+			font-size: 12px;
+
+			strong {
+				font-size: 12px;
+			}
+		}
+	}
+}

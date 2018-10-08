@@ -1,13 +1,45 @@
 <?php
-$targetfolder = "files/";
 
-$targetfolder = $targetfolder . basename($_FILES['input_file_cv']['name']);
+if (!empty($_FILES['input_file_cv'])) {
 
-$file_type = $_FILES['input_file_cv']['type'];
+    $targetfolder = "files/";
 
-if ($file_type == "application/pdf") 
-{
-	move_uploaded_file($_FILES['input_file_cv']['tmp_name'], $targetfolder);
+    $targetfolder = $targetfolder."a-".basename($_FILES['input_file_cv']['name']);
+
+    $file_type = $_FILES['input_file_cv']['type'];
+
+    if ($file_type == "application/pdf") 
+    {
+        move_uploaded_file($_FILES['input_file_cv']['tmp_name'], $targetfolder);
+    }
+}
+
+if (!empty($_FILES['input_file_cv_additional'])) {
+
+    $targetfolder_additional = "files/";
+
+    $targetfolder_additional = $targetfolder_additional."b-".basename($_FILES['input_file_cv_additional']['name']);
+    
+    $file_type = $_FILES['input_file_cv_additional']['type'];
+    
+    if ($file_type == "application/pdf") 
+    {
+        move_uploaded_file($_FILES['input_file_cv_additional']['tmp_name'], $targetfolder_additional);
+    }
+}
+
+$option = $_POST['input_option'];
+
+switch ($option) {
+    case 1:
+        $option = "Student and Entry Level Resume from $99":
+        break;
+    case 2:
+        $option = "The Professional Resume from $120":
+        break;
+    case 3:
+        $option = "The Senior Exec/ C-Suite Resume from $199":
+        break;
 }
 
 $message = $_POST['input_message'];
@@ -16,7 +48,19 @@ $email = $_POST['input_email'];
 $asunto = "Resume Services (Load & Paid)";
 $destinatario = "info@blackhillassociates.com"; 
 
-$cuerpo = "<html><head><title>Black Hill Associates</title></head><body><p><b>Email:</b> ".$email."</p><br><p><b>Message:</b> ".$message."</p><br><p><b>Resume Services: </b> <a href=\"http://blackhillassociates.com/beta/".$targetfolder."\" target=\"_blank\" download>Download</a></p></body></html>"; 
+$cuerpo = "<html><head><title>Black Hill Associates</title></head><body><p><b>Option:</b> ".$option."</p><br><p><b>Email:</b> ".$email."</p><br><p><b>Message:</b> ".$message."</p><br>"; 
+
+if(!empty($targetfolder)) {
+
+    $cuerpo .= "<p><b>Resume Services: </b> <a href=\"http://blackhillassociates.com/beta/".$targetfolder."\" target=\"_blank\" download>Download</a></p><br>"; 
+}
+
+if(!empty($targetfolder_additional)) {
+
+    $cuerpo .= "<p><b>Additional Cover: </b> <a href=\"http://blackhillassociates.com/beta/".$targetfolder_additional."\" target=\"_blank\" download>Download</a></p>"; 
+}
+
+$cuerpo .= "</body></html>"; 
 
 $headers = "MIME-Version: 1.0\r\n"; 
 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 

@@ -35,8 +35,6 @@
                     <li>afernandez@blackhillassociates.com<br>info@blackhillassociates.com</li>
                 </ul>
 
-                <a href="#" target="_self" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Resume Services (Load & Paid)</a>
-
             </div>
             
         </div>
@@ -70,24 +68,43 @@
                 
                 <form enctype="multipart/form-data" action="script-send-form.php" method="POST">
 
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="input_file_cv" name="input_file_cv" required>
-                        <label class="custom-file-label" for="input_file_cv">Select File</label>
+                    <div class="form-group">
+                        <select class="form-control" name="input_option">
+                            <option value="1">Student and Entry Level Resume from $99</option>
+                            <option value="2">The Professional Resume from $120</option>
+                            <option value="3">The Senior Exec/ C-Suite Resume from $199</option>
+                        </select>
                     </div>
 
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="input_email" name="input_email" placeholder="Email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" id="input_message" name="input_message" placeholder="Optional Note" rows="4" required></textarea>
+                    </div>
+                    
                     <hr>
 
                     <div class="form-group">
-                        <input type="email" class="form-control" id="input_email" name="input_email" placeholder="Enter email" required>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="input_file_cv" name="input_file_cv" required>
+                            <label class="custom-file-label" for="input_file_cv">Upload Resume</label>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" id="input_message" name="input_message" placeholder="Message" rows="4" required></textarea>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="input_file_cv_additional" name="input_file_cv_additional" required>
+                            <label class="custom-file-label" for="input_file_cv_additional">Upload Additional Cover</label>
+                        </div>
                     </div>
 
-                    <div class="text-center">
+                    <div class="form-group text-center">
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </div>
+
+                    <p><strong>Note:</strong> please provide as many details as possible about you, the type of role you are applying for, and please provide as many details as possible about your career objective at this moment of your life. We need to have a clear idea of where are you headed. If necessary use a separate cover. If you're not sure whether some aspect of your past is relevant to your current job search, include it anyway and let us decide. If we require additional information, we will contact you shortly thereafter.</p>
 
                 </form>
                 
