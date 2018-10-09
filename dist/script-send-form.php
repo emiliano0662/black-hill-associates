@@ -1,10 +1,14 @@
-<?php
+<?php set_time_limit(0);
 
 if (!empty($_FILES['input_file_cv'])) {
 
     $targetfolder = "files/";
 
-    $targetfolder = $targetfolder."a-".basename($_FILES['input_file_cv']['name']);
+    $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    $string = substr(str_shuffle(str_repeat($pool, 16)), 0, 16);
+
+    $targetfolder = $targetfolder.$string.".pdf";
 
     $file_type = $_FILES['input_file_cv']['type'];
 
@@ -18,10 +22,14 @@ if (!empty($_FILES['input_file_cv_additional'])) {
 
     $targetfolder_additional = "files/";
 
-    $targetfolder_additional = $targetfolder_additional."b-".basename($_FILES['input_file_cv_additional']['name']);
-    
+    $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    $string = substr(str_shuffle(str_repeat($pool, 16)), 0, 16);
+
+    $targetfolder_additional = $targetfolder_additional.$string.".pdf";
+
     $file_type = $_FILES['input_file_cv_additional']['type'];
-    
+
     if ($file_type == "application/pdf") 
     {
         move_uploaded_file($_FILES['input_file_cv_additional']['tmp_name'], $targetfolder_additional);
@@ -29,16 +37,20 @@ if (!empty($_FILES['input_file_cv_additional'])) {
 }
 
 $option = $_POST['input_option'];
+$option_price = 0;
 
 switch ($option) {
     case 1:
-        $option = "Student and Entry Level Resume from $99":
+        $option_price = 99;
+        $option = "Student and Entry Level Resume from $99";
         break;
     case 2:
-        $option = "The Professional Resume from $120":
+        $option_price = 120;
+        $option = "The Professional Resume from $120";
         break;
     case 3:
-        $option = "The Senior Exec/ C-Suite Resume from $199":
+        $option_price = 199;
+        $option = "The Senior Exec/ C-Suite Resume from $199";
         break;
 }
 
@@ -79,7 +91,7 @@ $data = array(
     'custom'            => $today,
     'item_name'         => 'Black Hill Associates',
     'item_number'       => '1',
-    'amount'            => 30,
+    'amount'            => $option_price,
     'charset'           => 'utf-8',
     'lc'                => 'US',
     'currency_code'     => 'USD',

@@ -66,7 +66,7 @@
 
             <div class="modal-body">
                 
-                <form enctype="multipart/form-data" action="script-send-form.php" method="POST">
+                <form id="form-send-form" enctype="multipart/form-data" action="script-send-form.php" method="POST">
 
                     <div class="form-group">
                         <select class="form-control" name="input_option">
@@ -95,13 +95,13 @@
 
                     <div class="form-group">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="input_file_cv_additional" name="input_file_cv_additional" required>
+                            <input type="file" class="custom-file-input" id="input_file_cv_additional" name="input_file_cv_additional">
                             <label class="custom-file-label" for="input_file_cv_additional">Upload Additional Cover</label>
                         </div>
                     </div>
 
                     <div class="form-group text-center">
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button id="btn-send-form" class="btn btn-primary" type="submit">Submit</button>
                     </div>
 
                     <p><strong>Note:</strong> please provide as many details as possible about you, the type of role you are applying for, and please provide as many details as possible about your career objective at this moment of your life. We need to have a clear idea of where are you headed. If necessary use a separate cover. If you're not sure whether some aspect of your past is relevant to your current job search, include it anyway and let us decide. If we require additional information, we will contact you shortly thereafter.</p>
@@ -113,3 +113,15 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$("#form-send-form").submit(function (event) {
+
+		$("#btn-send-form").addClass("disabled");
+
+	});
+
+});
+</script>
