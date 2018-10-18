@@ -68,6 +68,14 @@ $(document).ready(function() {
 		owl_carousel.trigger('next.owl.carousel');
 	});
 
+	$('.btn-input_option').on('click', function (event) {
+
+		var item = $(this).data('item');
+
+		$('#input_option').val(item);
+
+	});
+
 	$("[data-dinaanim]").each(function () {
 
 		var $this = $(this);

@@ -153,6 +153,11 @@
             -moz-border-radius: 0.35rem;
             border-radius: 0.35rem;
         }
+
+        &.padding-top {
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
     }
 }
 

@@ -67,14 +67,7 @@
             <div class="modal-body">
                 
                 <form id="form-send-form" enctype="multipart/form-data" action="script-send-form.php" method="POST">
-
-                    <div class="form-group">
-                        <select class="form-control" name="input_option">
-                            <option value="1">Student and Entry Level Resume from $99</option>
-                            <option value="2">The Professional Resume from $120</option>
-                            <option value="3">The Senior Exec/ C-Suite Resume from $199</option>
-                        </select>
-                    </div>
+                    <input type="hidden" id="input_option" name="input_option" value="1">
 
                     <div class="form-group">
                         <input type="email" class="form-control" id="input_email" name="input_email" placeholder="Email address" required>
