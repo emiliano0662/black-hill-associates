@@ -86,19 +86,32 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+            .bg-info-home {
+                padding: 10px 20px;
+                background: transparent url('../img/bg-info.png');
+                -webkit-border-radius: .35rem;
+                -moz-border-radius: .35rem;
+                border-radius: .35rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                p {
+                    text-align: justify;
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: #000;
+                }
             
-            p {
-                text-align: justify;
-                font-weight: 700;
-                color: #000;
-            }
-            
-            small {
-                font-style: italic;
-                font-weight: 700;
-                font-size: 20px;
-                color: #000;
-                align-self: flex-end;
+                small {
+                    font-style: italic;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: #000;
+                    align-self: flex-end;
+                }
             }
 
             .btn-primary {
@@ -128,22 +141,22 @@
 .home-career-services {
 
     .col-lg-7 {
-        padding: 0px 40px;
+        padding: 0px 40px 15px 40px;
         background-color: #a9a9a9;
 
         h2 {
             margin: 18px 0px 10px 0px;
             text-align: center;
             font-weight: 700;
-            font-size: 40px;
+            font-size: 30px;
             color: #000;
         }
 
         p {
             margin: 0px 0px 25px 0px;
             text-align: justify;
-            line-height: 35px;
-            font-size: 25px;
+            line-height: 19px;
+            font-size: 12px;
             color: #000;
         }
 
@@ -168,7 +181,7 @@
         background-color: #000000;
         
         .img-fluid {
-            max-width: 410px;    
+            max-width: 320px;    
         }
     }
 }
@@ -187,15 +200,15 @@
         h2 {
             margin: 18px 0px 10px 0px;
             font-weight: 700;
-            font-size: 40px;
+            font-size: 30px;
             color: #FFF;
         }
 
         p {
             margin: 0px 0px 25px 0px;
             text-align: justify;
-            line-height: 35px;
-            font-size: 25px;
+            line-height: 19px;
+            font-size: 12px;
             color: #FFF;
         }
 
@@ -226,15 +239,15 @@
         h2 {
             margin: 18px 0px 10px 0px;
             font-weight: 700;
-            font-size: 40px;
+            font-size: 30px;
             color: #000;
         }
 
         p {
             margin: 0px 0px 25px 0px;
             text-align: justify;
-            line-height: 35px;
-            font-size: 25px;
+            line-height: 19px;
+            font-size: 12px;
             color: #000;
         }
 
@@ -258,7 +271,7 @@
         margin: 8px 0px;
         text-align: center;
         font-weight: 700;
-        font-size: 50px;
+        font-size: 40px;
         color: #FFF;
     }
 }
