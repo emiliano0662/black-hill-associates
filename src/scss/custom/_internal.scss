@@ -22,8 +22,8 @@
             p {
                 margin: 0px 0px 15px 0px;
                 text-align: justify;
-                line-height: 19px;
-                font-size: 12px;
+                line-height: 20px;
+                font-size: 17px;
                 color: #FFF;
             }
         }
@@ -67,8 +67,8 @@
             p {
                 margin: 0px 0px 15px 0px;
                 text-align: justify;
-                line-height: 19px;
-                font-size: 12px;
+                line-height: 20px;
+                font-size: 17px;
                 color: #FFF;
             }
         }
@@ -123,12 +123,13 @@
         p {
             margin: 0px 0px 25px 0px;
             text-align: justify;
-            line-height: 19px;
-                font-size: 12px;
+            line-height: 20px;
+            font-size: 17px;
             color: #000;
         }
 
         ul {
+            min-width: 400px;
             list-style: none;
             padding-left: 0px;
             text-align: left;
@@ -245,6 +246,19 @@
 
         h2 {
             font-size: 25px;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+
+    .block-internal-list {
+
+        .col-lg-8 {
+            
+            ul {
+                min-width: auto;
+            }
         }
     }
 }

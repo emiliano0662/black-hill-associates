@@ -155,8 +155,8 @@
         p {
             margin: 0px 0px 25px 0px;
             text-align: justify;
-            line-height: 19px;
-            font-size: 12px;
+            line-height: 20px;
+            font-size: 17px;
             color: #000;
         }
 
@@ -181,7 +181,7 @@
         background-color: #000000;
         
         .img-fluid {
-            max-width: 320px;    
+            max-width: 350px;    
         }
     }
 }
@@ -189,6 +189,7 @@
 .home-staffing-service {
 
     .col-lg-4 {
+        min-height: 350px;
         background: transparent url('../img/img-staffing-service.jpg') center center / cover no-repeat;
     }
 
@@ -207,8 +208,8 @@
         p {
             margin: 0px 0px 25px 0px;
             text-align: justify;
-            line-height: 19px;
-            font-size: 12px;
+            line-height: 20px;
+            font-size: 17px;
             color: #FFF;
         }
 
@@ -227,6 +228,7 @@
 .home-industries {
 
     .col-lg-4 {
+        min-height: 350px;
         background: transparent url('../img/img-industries-areas-of-experise.jpg') center center / cover no-repeat;
     }
 
@@ -246,8 +248,8 @@
         p {
             margin: 0px 0px 25px 0px;
             text-align: justify;
-            line-height: 19px;
-            font-size: 12px;
+            line-height: 20px;
+            font-size: 17px;
             color: #000;
         }
 
@@ -411,7 +413,7 @@
         background: #FFF;
 
         .col-lg-4 {
-            height: 200px;
+            min-height: 200px;
         }
 
         .col-lg-8 {
